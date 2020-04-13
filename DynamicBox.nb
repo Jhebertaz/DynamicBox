@@ -1,0 +1,314 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13690,        306]
+NotebookOptionsPosition[     13241,        289]
+NotebookOutlinePosition[     13605,        305]
+CellTagsIndexPosition[     13562,        302]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"chose", "=", 
+       RowBox[{"{", 
+        RowBox[{"{", "0", "}"}], "}"}]}], ",", 
+      RowBox[{"c", "=", "1"}], ",", 
+      RowBox[{"d", "=", "1"}]}], "}"}], ",", "\n", "\t\t\t\t", 
+    RowBox[{"Panel", "[", 
+     RowBox[{"Panel", "[", 
+      RowBox[{"Grid", "[", 
+       RowBox[{"{", "\n", "\t\t\t\t\t\t\t", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<DynamicBox3\>\"", ",", "Blue", ",", "Italic", ",", "16"}], 
+            "]"}], ",", "SpanFromBoth", ","}], "\n", 
+          "\t\t\t\t\t\t\t\t\t\t\t\t\t\t", "}"}], ",", "\n", "\t\t\t\t\t\t\t", 
+         
+         RowBox[{"{", 
+          RowBox[{"Row", "[", 
+           RowBox[{"{", "\n", "\t\t\t\t\t\t\t\t\t", 
+            RowBox[{"\"\<Number : \>\"", ",", 
+             RowBox[{"Dynamic", "[", "c", "]"}], ",", 
+             RowBox[{"Spacer", "[", "10", "]"}], ",", "\n", 
+             "\t\t\t\t\t\t\t\t\t", 
+             RowBox[{"Button", "[", 
+              RowBox[{"\"\<-\>\"", ",", 
+               RowBox[{"c", "--"}], ",", 
+               RowBox[{"Enabled", "\[Rule]", 
+                RowBox[{"Dynamic", "[", 
+                 RowBox[{"c", ">", "1"}], "]"}]}]}], "]"}], ",", "\n", 
+             "\t\t\t\t\t\t\t\t\t", 
+             RowBox[{"Column", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Button", "[", 
+                 RowBox[{"\"\<+\>\"", ",", 
+                  RowBox[{"d", "++"}], ",", 
+                  RowBox[{"Enabled", "\[Rule]", 
+                   RowBox[{"Dynamic", "[", 
+                    RowBox[{"d", "<", 
+                    RowBox[{"d", "+", "1"}]}], "]"}]}]}], "]"}], ",", "\n", 
+                "\t\t\t\t\t\t\t\t\t", 
+                RowBox[{"Button", "[", 
+                 RowBox[{"\"\<Restart\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ",", 
+                    RowBox[{"c", "=", "1"}], ",", 
+                    RowBox[{"d", "=", "1"}], ",", 
+                    RowBox[{"chose", "=", 
+                    RowBox[{"{", 
+                    RowBox[{"{", "0", "}"}], "}"}]}]}], "}"}]}], "]"}], ",", 
+                "\n", "\t\t\t\t\t\t\t\t\t", 
+                RowBox[{"Button", "[", 
+                 RowBox[{"\"\<-\>\"", ",", 
+                  RowBox[{"d", "--"}], ",", 
+                  RowBox[{"Enabled", "\[Rule]", 
+                   RowBox[{"Dynamic", "[", 
+                    RowBox[{"d", ">", "1"}], "]"}]}]}], "]"}]}], "}"}], "]"}],
+              ",", "\n", "\t\t\t\t\t\t\t\t\t", 
+             RowBox[{"Button", "[", 
+              RowBox[{"\"\<+\>\"", ",", 
+               RowBox[{"c", "++"}], ",", 
+               RowBox[{"Enabled", "\[Rule]", " ", 
+                RowBox[{"Dynamic", "[", 
+                 RowBox[{"c", "<", 
+                  RowBox[{"c", "+", "1"}]}], "]"}]}]}], "]"}]}], "\n", 
+            "\t\t\t\t\t\t\t\t", "}"}], "]"}], "\n", "\t\t\t\t\t\t\t", "}"}], 
+         ",", "\n", "\t\t\t\t\t\t\t", 
+         RowBox[{"{", 
+          RowBox[{"Dynamic", "[", 
+           RowBox[{"TableForm", "[", "\n", "\t\t\t\t\t\t\t\t\t\t\t\t", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"With", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"i", "=", "i"}], ",", 
+                   RowBox[{"j", "=", "j"}]}], "}"}], ",", "\n", 
+                 "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<chose\>\"", "<>", 
+                    RowBox[{"ToString", "@", "i"}], "<>", 
+                    RowBox[{"ToString", "@", "j"}]}], ",", "\n", 
+                   "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                   RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"chose", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "]"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "50"}]}], "]"}], ",", 
+                   "\n", "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                   RowBox[{"Dynamic", "@", 
+                    RowBox[{"chose", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}]}]}], "\n", 
+                  "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t", "}"}]}], "\n", 
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t", "]"}], ",", "\n", 
+               "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "1", ",", "c"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", "1", ",", "d"}], "}"}]}], "\n", 
+              "\t\t\t\t\t\t\t\t\t\t\t\t\t", "]"}], ",", "\n", 
+             "\t\t\t\t\t\t\t\t\t\t\t\t", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"Or", "[", "\n", "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Length", "@", "chose"}], "=!=", "c"}], ",", "\n", 
+                 "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                 RowBox[{
+                  RowBox[{"Length", "@", "chose"}], "=!=", "d"}], ",", "\n", 
+                 "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                 RowBox[{
+                  RowBox[{"Length", "@", "chose"}], "\[Equal]", "c", 
+                  "\[Equal]", "d"}]}], "\n", "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+                "]"}], ",", "\n", "\t\t\t\t\t\t\t\t\t\t\t\t\t", 
+               RowBox[{"chose", "=", 
+                RowBox[{"PadRight", "[", 
+                 RowBox[{
+                  RowBox[{"chose", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ";;", 
+                    RowBox[{"Min", "[", 
+                    RowBox[{"c", ",", "d", ",", 
+                    RowBox[{"Length", "[", "chose", "]"}]}], "]"}]}], "]"}], 
+                   "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"c", ",", "d"}], "}"}]}], "]"}]}]}], "\n", 
+              "\t\t\t\t\t\t\t\t\t\t\t\t", "]"}]}], "\n", 
+            "\t\t\t\t\t\t\t\t\t\t\t", "]"}], "\n", "\t\t\t\t\t\t\t\t\t", 
+           "]"}], "\n", "\t\t\t\t\t\t\t\t", "}"}]}], "\n", "\t\t\t\t\t\t\t", 
+        "}"}], "]"}], "\n", "\t\t\t\t\t\t", "]"}], "\n", "\t\t\t", "]"}]}], 
+   "\n", "]"}], "\t\t\t\t\t\t\t\t\t\t"}]], "Input",
+ CellChangeTimes->{{3.795086967227194*^9, 3.795087117510695*^9}, {
+   3.7950871576464243`*^9, 3.795087583677389*^9}, {3.795087622717618*^9, 
+   3.795087832157802*^9}, {3.795087864240386*^9, 3.795087906970849*^9}, {
+   3.7950879428982697`*^9, 3.795088000769126*^9}, {3.795088044538825*^9, 
+   3.795088195508346*^9}, {3.7950882515801764`*^9, 3.795088326401512*^9}, {
+   3.795088386899171*^9, 3.795088406946568*^9}, {3.795088468187751*^9, 
+   3.795088559473287*^9}, {3.795088686505499*^9, 3.795088704800144*^9}, {
+   3.7950887399446993`*^9, 3.795088851575082*^9}, {3.795088913471208*^9, 
+   3.7950889501423264`*^9}, {3.7950889952019377`*^9, 3.795089072331856*^9}, {
+   3.7950891216136513`*^9, 3.795089155412558*^9}, {3.7950892249409037`*^9, 
+   3.795089313187196*^9}, {3.795089348507415*^9, 3.795089473113871*^9}, {
+   3.795089529665773*^9, 3.795089677404698*^9}, {3.795089715238402*^9, 
+   3.7950897887999477`*^9}, {3.795194327951839*^9, 3.7951944288071117`*^9}, {
+   3.795194570542218*^9, 3.7951945918698807`*^9}, {3.7951946931736937`*^9, 
+   3.795194799764306*^9}, 3.795194929155406*^9, {3.795195270376617*^9, 
+   3.795195271824613*^9}, {3.795195449487235*^9, 3.7951956959574823`*^9}, {
+   3.7951957383337717`*^9, 3.795195738732891*^9}, {3.795195772589548*^9, 
+   3.79519592312327*^9}, {3.7951959920996532`*^9, 3.7951959931469717`*^9}, {
+   3.795196188473824*^9, 3.7951962074009113`*^9}, {3.7951962577452297`*^9, 
+   3.795196265120522*^9}, {3.7951964865834303`*^9, 3.795196547605893*^9}, {
+   3.795196619453878*^9, 3.795196671524745*^9}, {3.795196767844491*^9, 
+   3.79519677699028*^9}, {3.795196812859921*^9, 3.7951968151639223`*^9}, {
+   3.795196873939539*^9, 3.7951969490314617`*^9}, {3.7957806577925577`*^9, 
+   3.795780681687258*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"12aca386-f017-44bf-a0af-34424e2609e8"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`chose$$ = {{0}}, $CellContext`c$$ = 
+  1, $CellContext`d$$ = 1}, 
+  PanelBox[
+   PanelBox[
+    TagBox[GridBox[{
+       {
+        StyleBox["\<\"DynamicBox3\"\>",
+         StripOnInput->False,
+         LineColor->RGBColor[0, 0, 1],
+         FrontFaceColor->RGBColor[0, 0, 1],
+         BackFaceColor->RGBColor[0, 0, 1],
+         GraphicsColor->RGBColor[0, 0, 1],
+         FontSize->16,
+         FontSlant->Italic,
+         FontColor->RGBColor[0, 0, 1]], "\[SpanFromBoth]", ""},
+       {
+        TemplateBox[{"\"Number : \"",DynamicBox[
+           ToBoxes[$CellContext`c$$, StandardForm]],
+          TemplateBox[{10}, "Spacer1"],ButtonBox[
+          "\"-\"", ButtonFunction :> Decrement[$CellContext`c$$], Enabled -> 
+           Dynamic[$CellContext`c$$ > 1], Appearance -> Automatic, Evaluator -> 
+           Automatic, Method -> "Preemptive"],TagBox[
+           GridBox[{{
+              ButtonBox[
+              "\"+\"", ButtonFunction :> Increment[$CellContext`d$$], Enabled -> 
+               Dynamic[$CellContext`d$$ < $CellContext`d$$ + 1], Appearance -> 
+               Automatic, Evaluator -> Automatic, Method -> "Preemptive"]}, {
+              ButtonBox["\"Restart\"", ButtonFunction :> {
+                 Clear["Global`*"], $CellContext`c$$ = 1, $CellContext`d$$ = 
+                 1, $CellContext`chose$$ = {{0}}}, Appearance -> Automatic, 
+               Evaluator -> Automatic, Method -> "Preemptive"]}, {
+              ButtonBox[
+              "\"-\"", ButtonFunction :> Decrement[$CellContext`d$$], Enabled -> 
+               Dynamic[$CellContext`d$$ > 1], Appearance -> Automatic, 
+               Evaluator -> Automatic, Method -> "Preemptive"]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+            "Column", 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Column"],
+          ButtonBox[
+          "\"+\"", ButtonFunction :> Increment[$CellContext`c$$], Enabled -> 
+           Dynamic[$CellContext`c$$ < $CellContext`c$$ + 1], Appearance -> 
+           Automatic, Evaluator -> Automatic, Method -> "Preemptive"]},
+         "RowDefault"], "", ""},
+       {
+        DynamicBox[ToBoxes[
+          TableForm[
+           Table[
+            
+            With[{$CellContext`i$ = $CellContext`i, $CellContext`j$ = \
+$CellContext`j}, {
+              StringJoin["chose", 
+               ToString[$CellContext`i$], 
+               ToString[$CellContext`j$]], 
+              InputField[
+               Dynamic[
+                Part[$CellContext`chose$$, $CellContext`i$, $CellContext`j$]],
+                ImageSize -> 50], 
+              Dynamic[
+               
+               Part[$CellContext`chose$$, $CellContext`i$, \
+$CellContext`j$]]}], {$CellContext`i, 1, $CellContext`c$$}, {$CellContext`j, 
+             1, $CellContext`d$$}], 
+           If[
+            Or[
+            Length[$CellContext`chose$$] =!= $CellContext`c$$, 
+             Length[$CellContext`chose$$] =!= $CellContext`d$$, 
+             Length[$CellContext`chose$$] == $CellContext`c$$ == \
+$CellContext`d$$], $CellContext`chose$$ = PadRight[
+              Part[$CellContext`chose$$, 
+               Span[1, 
+                Min[$CellContext`c$$, $CellContext`d$$, 
+                 
+                 Length[$CellContext`chose$$]]]], {$CellContext`c$$, \
+$CellContext`d$$}]]], StandardForm],
+         ImageSizeCache->{79., {27., 35.}}], "", ""}
+      },
+      AutoDelete->False,
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Grid"]]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.79519573943045*^9, {3.795195773896596*^9, 3.795195819564279*^9}, {
+   3.7951958526829*^9, 3.795195887517305*^9}, 3.795195924163642*^9, 
+   3.795195994639476*^9, {3.7951961911627483`*^9, 3.795196210312723*^9}, {
+   3.795196258395756*^9, 3.7951962654616203`*^9}, {3.795196517788978*^9, 
+   3.7951965517396803`*^9}, {3.7951966664601183`*^9, 
+   3.7951966722436333`*^9}, {3.795196816331922*^9, 3.7951968534857283`*^9}, 
+   3.7951969440448103`*^9, 3.7957806609763412`*^9, 3.79578069927514*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"82446cba-75b4-44eb-95a7-8810e193595b"]
+}, Open  ]]
+},
+WindowSize->{1920, 1052},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 8414, 171, 1363, "Input",ExpressionUUID->"12aca386-f017-44bf-a0af-34424e2609e8"],
+Cell[8997, 195, 4228, 91, 280, "Output",ExpressionUUID->"82446cba-75b4-44eb-95a7-8810e193595b"]
+}, Open  ]]
+}
+]
+*)
+
